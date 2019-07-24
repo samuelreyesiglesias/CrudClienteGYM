@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppGym.View.LoginView" BackgroundColor="#000099">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Frame VerticalOptions="CenterAndExpand" BackgroundColor="#dfdfff" Padding="0" Margin="20" CornerRadius="30" HasShadow="True">
+                <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="#efefff" Padding="20" Margin="10">
+                <StackLayout Rotation="-2">
+                <Label Text="Entrar a Sistema" FontSize="30" TextColor="#000088" HorizontalOptions="CenterAndExpand"></Label>
+            </StackLayout>
+                        
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="Usuario" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center"></Label>
+                <Frame HorizontalOptions="FillAndExpand"  Grid.Column="1" Grid.Row="0" Padding="0" Margin="0" BorderColor="#000077" HasShadow="True" CornerRadius="5">
+                            <Entry Text="admin" Placeholder="Ingrese usuario" HorizontalOptions="FillAndExpand" x:Name="EntryUsuario"></Entry>
+                 </Frame>
+                <Label Text="Clave" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center"></Label>
+                <Frame HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="1" Padding="0" Margin="0" BorderColor="#000077" CornerRadius="5" HasShadow="True">
+                <Entry Text="admin" Placeholder="Ingrese clave"  HorizontalOptions="FillAndExpand" x:Name="EntryClave" IsPassword="True"></Entry>
+                </Frame>
+                <Frame HorizontalOptions="Center" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Padding="0" Margin="0" BorderColor="#000077" CornerRadius="5" HasShadow="False">
+                <Button Text="Entrar" HorizontalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Padding="0" Margin="0" x:Name="BtnIniciarSesion" Clicked="BtnIniciarSesion_Clicked"></Button>
+                </Frame>
+            </Grid>
+        </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

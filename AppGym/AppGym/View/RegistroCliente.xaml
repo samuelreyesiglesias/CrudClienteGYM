@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppGym.View.RegistroCliente">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Entry Text="{Binding Nombre}" Placeholder="Escribir Nombre" x:Name="EntryNombre"></Entry>
+            <Entry Text="{Binding Edad}" Placeholder="Escribir Edad" Keyboard="Numeric" x:Name="EntryEdad"></Entry>
+            <Entry Text="{Binding Sexo}" Placeholder="Escrbir m:Masculino o f:Femenino" MaxLength="1" x:Name="EntrySexo"></Entry>
+            <Entry Text="{Binding DUI}" Placeholder="Escribir DUI" x:Name="EntryDUI"></Entry>
+            <Entry Text="{Binding NIT}" Placeholder="Escribir NIT" x:Name="EntryNIT"></Entry>
+
+            <Entry Text="{Binding Fecha}" Placeholder="Fecha Registro" x:Name="EntryFecha" IsReadOnly="True"></Entry>
+            <Label Text="Se genera automaticamente" FontSize="10"></Label>
+
+            <Entry Text="{Binding Telefono}" Placeholder="Escribir Telefono" x:Name="EntryTelefono"></Entry>
+            <Entry Text="{Binding Email}" Placeholder="Escribir Email" x:Name="EntryEmail"></Entry>
+            <Entry Text="{Binding Direccion}" Placeholder="Escribir Direccion" x:Name="EntryDireccion"></Entry>
+            <Button Text="Guardar" Clicked="Button_Clicked"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
