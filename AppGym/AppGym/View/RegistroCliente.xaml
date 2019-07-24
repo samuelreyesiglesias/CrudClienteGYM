@@ -22,6 +22,10 @@
             <Entry Text="{Binding Direccion}" Placeholder="Escribir Direccion" x:Name="EntryDireccion"></Entry>
             <Button Text="Guardar" Clicked="Button_Clicked"></Button>
 
+            <StackLayout x:Name="StackParaBtnEliminar">
+                <!--NO BORRAR LINEA DE CODIGO..-->
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

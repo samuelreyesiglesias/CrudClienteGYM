@@ -14,7 +14,7 @@
                     </StackLayout>
                     <ListView x:Name="ListadoDeClientes"  ItemSelected="OnListViewItemSelected">
                 <ListView.Header>
-                    <StackLayout>
+                    <StackLayout BackgroundColor="#afafff">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"></ColumnDefinition>

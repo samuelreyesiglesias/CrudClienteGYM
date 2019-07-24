@@ -33,6 +33,27 @@ namespace AppGym.View
             Actualizar = new Cliente();
             Actualizar = datos;
             BindingContext = datos;
+            Button botonEliminar = new Button
+            {
+                Text = "Eliminar"
+            };
+            botonEliminar.Clicked += (sender, args) =>
+            {
+                StackParaBtnEliminar.Children.Add(botonEliminar);
+
+                int Result = Conexion.Eliminar(Actualizar);
+                if (Result == 1)
+                {
+                    DisplayAlert("Aviso", "Registro fue Eliminado", "Ok");
+                }
+                else
+                {
+                    DisplayAlert("Aviso", "Ocurrio un error", "Ok");
+                }
+                Navigation.PopAsync();
+            };
+           
+
         }
         private void Button_Clicked(object sender, EventArgs e)
         {
@@ -53,6 +74,7 @@ namespace AppGym.View
             Nuevo.Direccion = EntryDireccion.Text;
             int resultado = 0;
             if (Actualizar != null) {
+                Nuevo.IdCliente = Actualizar.IdCliente;
                 //Insertamos los datos que anteriormente hemos guardado en el Objeto [Nuevo] de tipo Cliente
                  resultado = Conexion.Actualizar(Nuevo);
             }
@@ -71,7 +93,7 @@ namespace AppGym.View
             {
                 DisplayAlert("Mensaje", "Hubo un error al ingresar dato", "ok");
             }
-            
+            Navigation.PopAsync();
         }
     }
 }
